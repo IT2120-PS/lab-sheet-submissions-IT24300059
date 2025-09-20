@@ -1,0 +1,36 @@
+dbinom(40, 44, 0.92)
+##p=40/ x= 44 / n=92
+
+pbinom(35, 44, 0.92, lower.tail = TRUE)
+#TO GET LESS THAN WE USE LOWER.TAIL AND FOR MORE THAN MAKE IT FALSE
+
+pbinom(37,44,0.92, lower.tail = FALSE)
+1- pbinom(37,44,0.92, lower.tail = TRUE)
+#probability of p(x<38) this == to p(x<37)
+
+#probability between 40 to 42. A- B we get the gap
+pbinom(42,44,0.92, lower.tail = TRUE) - 
+  pbinom(39,44,0.90, lower.tail = TRUE)
+
+#to find p(x=6) and have givan lamda = 5
+dpois(6, 5)
+
+ppois(6,5,lower.tail=FALSE)
+
+
+setwd("C:\\Users\\it24300059\\Documents\\IT24300059_Lab6")
+getwd()
+
+##1. 
+## x is a binomial distribution with n = 50 and p = 0.85
+
+#probability that at least 47 students passed 
+1 - pbinom(46, 50, 0.85)
+
+#part2
+
+# X is the number of customers calls per one hour
+
+# x is poisson distribution with, lamda = 12
+
+dpois(15, 12)
